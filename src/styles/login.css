@@ -1,0 +1,106 @@
+.main-login-container {
+  background-color: #fafaf9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.login-container {
+  box-shadow: 0px 0px 12px 13px rgba(204, 204, 204, 0.404);
+  border-radius: 10px;
+  background-color: #ffedd5;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-container{
+  border-radius: 10px;
+  background-color: #fde68a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px 10px;
+  margin-bottom: 1.5rem;
+}
+
+.input-login-container>label{
+  display: block;
+  margin: 2px;
+}
+
+.input-login-container>input{
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 15px;
+  margin: 5px;
+}
+
+.form-login>button{
+  border: none;
+  padding: 8px 20px;
+  border-radius: 90px;
+  color: #000;
+  background: #fcd34d;
+  margin: 7px 5px;
+}
+
+.login-container>button {
+  padding: 8px 20px;
+  border-radius: 90px;
+  color: #000;
+  background: #fcd34d;
+  border: none;
+  margin: 30px 5px;
+}
+
+.main-login-container button {
+  box-shadow: 0px 3px 7px 3px rgba(58, 57, 57, 0.144);
+}
+
+
+@media only screen and (min-width: 600px) {
+  .main-login-container{
+    font-size: 1.7rem;
+    padding: 4rem;
+  }
+
+  .main-login-container button {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .login-container {
+    width: 40%;
+    padding: 20px;
+  }
+  .main-login-container{
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+  .main-login-container button {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .login-container{
+    width: 30%;
+    border-radius: 15px;
+    background-color: #ffedd5bd;
+    
+  }
+
+  .main-login-container{
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,155 @@
+.shop-container {
+  background-color: rgb(250, 247, 242);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.shop-container>h2 {
+  margin-top: 10px;
+}
+
+
+.shop-buttons-container {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  overflow: auto;
+  width: 100%;
+  gap: 3vw;
+}
+
+.button-item {
+  background-color: #fcd34d54;
+  font-size: 15px;
+  font-weight: bold;
+  border: 2px solid #fcd34db7 ;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 10px 0px;
+}
+
+.shop-form{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.shop-form>input{
+  border-radius: 20px;
+  padding: 3px;
+  font-size: 16px;
+  text-align: center;
+}
+.shop-form>input+button{
+  background-color: #fcd34d54;
+  border: 2px solid #fcd34db7;
+  border-radius: 7px;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.container-cards {
+  overflow: hidden;
+}
+
+.container-cards>li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.card-jewel {
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0px;
+  width: 83%;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  box-shadow: 0px -1px 1px 1px rgba(0, 0, 0, 0.096);
+}
+
+.card-jewel>img{
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card-jewel>p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hidden{
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .shop-container>h2 {
+    font-size: 2rem;
+  }
+  .shop-container p {
+    font-size: 2rem;
+  }
+  .shop-container button {
+    font-size: 1.6rem;
+  }
+
+  .shop-form>input{
+    font-size: 1.6rem;
+   
+  }
+  .shop-form>input+button{
+    font-size: 1.6rem;
+    padding: 8px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card-jewel{
+    max-width: 500px;
+    height: 520px;
+  }
+
+  .hidden{
+    transition: .5s;
+  }
+  
+  .hidden:hover{
+    opacity: 1;
+    transition: 1s;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .shop-buttons-container{
+    gap: 1vw;
+  }
+  .button-item {
+    cursor: pointer;
+  }
+
+  .shop-form>input+button{
+    cursor: pointer;
+  }
+}
