@@ -1,0 +1,121 @@
+.cart-container{
+  min-height: 85vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.cart-container>h2{
+  margin-top: .5rem;
+  font-size: 2rem;
+}
+
+.my-orders-list{
+  height: 500px;
+  width: 90%;
+  background-color: #ffedd56c;
+  border-radius: 20px;
+  overflow: auto;
+  padding: 15px;
+  list-style: none;
+  margin-top: .5rem;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.103);
+}
+
+.order-item{
+  text-align: center;
+  border-bottom: 1px solid;
+  margin: 2rem 0px;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.226);
+}
+
+.order-item>p{
+  margin: 10px 0px;
+}
+
+.order-item>p>span{
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.order-item>img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.order-item>button{
+  margin: 1.5rem 0;
+  width: 40%;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: #fcd34d54;
+  border: 2px solid #fcd34db7;
+}
+
+.cart-buttons{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cart-buttons button{
+  margin: 0px 20px;
+  margin-bottom: 15px;
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fcd34d54;
+  border: 2px solid #fcd34db7;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  
+  .my-orders-list{
+    height: 800px;
+    padding: 30px; 
+  }
+  .order-item>button{
+    font-size: 1.4rem;
+  }
+  .cart-buttons button {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .my-orders-list{
+    height: 500px;
+    width: 90%;
+  }
+  .order-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-item>img{
+    width: 25%;
+  }
+  .order-item>button{
+    width: 25%;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .order-item{
+    font-size: 1.4rem;
+    height: 200px;
+  }
+  .order-item>img{
+    width: 12%;
+  }
+}

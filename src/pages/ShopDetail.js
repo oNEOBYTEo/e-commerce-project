@@ -8,7 +8,7 @@ import '../styles/shopDetail.css'
 const ShopDetail = () => {
 
   const [ position, setPosition ] = useState(1);
-  const [ quantity, setQuantity ] = useState(0);
+  const [ quantity, setQuantity ] = useState(1);
   const [ notification, setNotificantion ] = useState(false)
   const { id } = useParams();
 
@@ -56,7 +56,7 @@ const ShopDetail = () => {
         }
         <div className='container-purchase-buttons'>
           <div>
-              <button onClick={() => setQuantity(quantity- 1)} disabled={quantity === 0 && true}>-</button>
+              <button onClick={() => setQuantity(quantity- 1)} disabled={quantity === 1 && true}>-</button>
               <p>{quantity}</p>
               <button onClick={() => setQuantity(quantity + 1)}>+</button>
           </div>
@@ -68,7 +68,13 @@ const ShopDetail = () => {
         {
           producstList.map(product => (
             <li className='related-item' key={product.id}>
-              <Link className="related-product" onClick={() => setPosition(position - position + 1)} to={`/shop/${product.id}`}>
+              <Link className="related-product" 
+                onClick={() => {
+                  setPosition(1)
+                  window.scrollTo(0,0)
+                }} 
+                to={`/shop/${product.id}`}
+              >
                 <img className="relase-image" src={product?.images?.[0]?.url} alt="product" />
                 <img className="hidden" src={product?.images?.[1]?.url}  alt="product" />
                 <p>{product.name}</p>

@@ -2,7 +2,7 @@ import { cartActions } from "../actions";
 
 const INITIAL_STATE = [];
 
-const favoritesReducer = (state = INITIAL_STATE, action) => {
+const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type){
     case cartActions.setCart:
       return action.payload
@@ -12,4 +12,4 @@ const favoritesReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default favoritesReducer;
+export default cartReducer;

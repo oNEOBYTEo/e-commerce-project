@@ -27,8 +27,38 @@ export const addCartThunk = (cart) => {
     dispatch(setIsLoading(true));
     axios
       .post("https://ecommerce-exercise-backend.herokuapp.com/products/add_to_cart/", cart, getConfig())
-      .then(() => getCartThunk())
+      .then(() => dispatch(getCartThunk()))
       .catch((error) => handleError(error))
       .finally(() => dispatch(setIsLoading(false)));
+  }
+};
+
+export const buyCartThunk = (cart) => {
+  return (dispatch) => {
+    dispatch(setIsLoading(true));
+    axios
+      .post("https://ecommerce-exercise-backend.herokuapp.com/cart/buy/", cart, getConfig())
+      .then(() => dispatch(getCartThunk()))
+      .catch((error) => handleError(error))
+      .finally(() => dispatch(setIsLoading(false)));
+  }
+}
+
+export const removeProductCartThunk = (id) => {
+  return (dispatch)=> {
+    axios
+      .delete(`https://ecommerce-exercise-backend.herokuapp.com/cart/${id}/remove_item/`, getConfig())
+      .then(() => dispatch(getCartThunk()))
+      .catch((error) => handleError(error))
+  }
+};
+
+export const removeCartThunk = () => {
+  return (dispatch)=> {
+    axios
+      .delete("https://ecommerce-exercise-backend.herokuapp.com/cart/empty_cart/"
+      , getConfig())
+      .then(() => dispatch(getCartThunk()))
+      .catch((error) => handleError(error))
   }
 }

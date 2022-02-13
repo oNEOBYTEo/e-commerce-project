@@ -63,6 +63,7 @@
   border: none;
   background-color: #fcd34d54;
   border: 2px solid #fcd34db7;
+  cursor: pointer;
 }
 .container-purchase-buttons>div{
   align-items: center;
@@ -184,9 +185,8 @@
   }
 
   .shopDetail-product>p{
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
-
   .p1{
     grid-column: 2/3;
     grid-row: 2/3;
@@ -221,14 +221,31 @@
   }
   
   .related-item {
-    width: 300px;
+    width: 400px;
   }
 
   .related-product {
-    height: 370px;
+    min-height: 500px;
   }
 
   .related-product>p{
     margin-bottom: 50px;
+  }
+
+  .notification{
+    position: absolute;
+    z-index: 30;
+    height: 80px;
+    top: 50vh;
+    font-size: 2rem;
+
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .shopDetail-product>p{
+    font-size: 2rem;
+    margin: 10px;
   }
 }
